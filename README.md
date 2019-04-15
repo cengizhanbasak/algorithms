@@ -12,8 +12,8 @@ List of algorithms implemented(or to be implemented):
 - [x] Binary Search
 - [x] Bubble Sort
 - [x] Insertion Sort
-- [ ] Selection Sort
-- [ ] Quicksort
+- [x] Selection Sort
+- [x] Quicksort
 - [ ] Merge Sort
 - [ ] Heapsort
 - [ ] Radix Sort

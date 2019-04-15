@@ -7,18 +7,20 @@ import random
 # items on the right are inserted to left
 # until no item left on the right side of the wall
 def sort(arr):
-  wall = 1
+  wall = 0
   while(wall<len(arr)):
     i=wall
-    while(i>0 and arr[i]<arr[i-1]):
-      # XOR_SWAP
-      arr[i] = arr[i]^arr[i-1]
-      arr[i-1] = arr[i]^arr[i-1]
-      arr[i] = arr[i]^arr[i-1]
-      i-=1
+    minimum=i
+    while(i<len(arr)):
+      if(arr[i]<arr[minimum]):
+        minimum = i
+      i+=1
+    temp = arr[wall]
+    arr[wall] = arr[minimum]
+    arr[minimum] = temp
     wall+=1
 
-arr = list(range(1000))
+arr = list(range(100))
 random.shuffle(arr)
 
 print(arr)
