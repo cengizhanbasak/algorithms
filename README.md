@@ -14,7 +14,7 @@ List of algorithms implemented(or to be implemented):
 - [x] Insertion Sort
 - [x] Selection Sort
 - [x] Quicksort
-- [ ] Merge Sort
+- [x] Merge Sort
 - [ ] Heapsort
 - [ ] Radix Sort
 - [ ] Brute Force Search
