@@ -1,6 +1,7 @@
 # given an array, find the index of number if exists
 # return -1 if not exists
 # O(n) time where n is length of the array
+# SEE:brute force search
 import random
 
 def search(arr,num):
