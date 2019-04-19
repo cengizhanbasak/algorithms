@@ -18,7 +18,7 @@ List of algorithms implemented(or to be implemented):
 - [x] Heapsort
 - [x] Radix Sort
 - [x] Brute Force Search
-- [ ] Depth First Search
+- [x] Depth First Search
 - [ ] Breadth First Search
 - [ ] Fibonacci Search
 - [ ] Djikstra's Algorithm
