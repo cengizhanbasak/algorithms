@@ -19,7 +19,7 @@ List of algorithms implemented(or to be implemented):
 - [x] Radix Sort
 - [x] Brute Force Search
 - [x] Depth First Search
-- [ ] Breadth First Search
+- [x] Breadth First Search
 - [ ] Fibonacci Search
 - [ ] Djikstra's Algorithm
 - [ ] Prim's Algorithm

@@ -1,12 +1,14 @@
-# depth first search is an algorithm on graph traversals
+# breadth first search is an algorithm on graph traversals
 # starting from a root, traversal is made by 
-# going as deep as possible without backtracking
+# visiting all the neighbours before going one level deeper
 # implementation differs by how we represent the graphs
 
 # example: directed, unweighted graph is represented by a 2D list (adjacency matrix)
 # O(Vˆ2)
 
-graph1 = [
+import queue
+
+graph = [
   [0,1,0,0,0,0,0,0],
   [0,0,0,1,0,0,0,0],
   [0,1,0,0,0,0,0,0],
@@ -14,7 +16,7 @@ graph1 = [
   [0,0,0,0,0,1,0,0],
   [0,0,0,0,0,0,0,1],
   [0,0,0,0,1,0,0,0],
-  [0,0,0,0,0,0,1,0]
+  [0,0,0,0,0,0,1,0],
   ]
 
 graph2 = [
@@ -25,20 +27,29 @@ graph2 = [
   [0,0,0,0,0,0,0,0],
   [0,0,0,0,0,0,0,0],
   [0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,1,0]
+  [0,0,0,0,0,0,1,0],
 ]
+  
 
 
-def dfs(graph,root,discovered):
+def bfs(graph,root):
+  discovered = []
+  q = queue.Queue()
+  q.put(root)
   discovered += [root]
   print(root)
-  for i in range(len(graph[root])):
-    if(graph[root][i]==1):
-      if(not i in discovered):
-        dfs(graph,i,discovered)
+  while(not q.empty()):
+    v = q.get()
+    for i in range(len(graph[v])):
+      if(graph[v][i]==1):
+        if(not i in discovered):
+          discovered += [i]
+          print(i)
+          q.put(i)
 
 
-dfs(graph1,0,[])
+# bfs(graph,0)
+
 
 # second example: graph is represented by it's adjacency list
 # O(V+E) (number of vertices + number of edges)
@@ -65,11 +76,18 @@ graph2_adjlist = [
   [6]
 ]
 
-def dfs2(adjlist,root,discovered):
+def bfs2(adjlist,root):
+  discovered = []
+  q = queue.Queue()
+  q.put(root)
   discovered += [root]
   print(root)
-  for i in adjlist[root]:
-    if(not i in discovered):
-        dfs2(adjlist,i,discovered)
+  while(not q.empty()):
+    v = q.get()
+    for i in adjlist[v]:
+      if(not i in discovered):
+        discovered += [i]
+        print(i)
+        q.put(i)
 
-dfs2(graph1_adjlist,0,[])
+bfs2(graph2_adjlist,0)
