@@ -20,7 +20,7 @@ List of algorithms implemented(or to be implemented):
 - [x] Brute Force Search
 - [x] Depth First Search
 - [x] Breadth First Search
-- [ ] Fibonacci Search
+- [x] Fibonacci Search
 - [ ] Djikstra's Algorithm
 - [ ] Prim's Algorithm
 - [ ] Bellman-Ford Algorithm
