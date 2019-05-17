@@ -21,7 +21,7 @@ List of algorithms implemented(or to be implemented):
 - [x] Depth First Search
 - [x] Breadth First Search
 - [x] Fibonacci Search
-- [ ] Djikstra's Algorithm
+- [x] Djikstra's Algorithm
 - [ ] Prim's Algorithm
 - [ ] Bellman-Ford Algorithm
 - [ ] Floyd-Warshall Algorithm
